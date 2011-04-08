@@ -7,6 +7,6 @@ class SimpleImplementation
  
   java_signature 'void testingMethod()'
 	def testingMethod()
-		p "testing method implemented in JRuby"
+		p "JRuby code run inside Java... :) I love Poznan!"
 	end
 end

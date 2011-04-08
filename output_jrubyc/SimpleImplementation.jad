@@ -25,9 +25,9 @@ public class SimpleImplementation extends AbstractScript
         super.runtimeCache = new RuntimeCache();
         initFromDescriptor("require\uFFFFF\uFFFFjava_import\uFFFFF\uFFFFjava_implements\uFFFFF\uFFFFSimpleJavaInterface\uFFFFN\uFFFFsimplejavainterface\uFFFFN\uFFFFjava_signature\uFFFFF\uFFFFp\uFFFFF\uFFFF\001\000\000\001\000\000\000\000\000\000\000\004\001");
         setEncoding(0, "ASCII-8BIT");
-        setByteList(3, "testing method implemented in JRuby", getEncoding0());
         setByteList(1, "simplejavainterface.SimpleJavaInterface", getEncoding0());
         setByteList(0, "java", getEncoding0());
+        setByteList(3, "JRuby code run inside Java... :) I love Poznan!", getEncoding0());
         setByteList(2, "void testingMethod()", getEncoding0());
     }
 

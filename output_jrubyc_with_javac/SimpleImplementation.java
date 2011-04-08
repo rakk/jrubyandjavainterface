@@ -23,7 +23,7 @@ public class SimpleImplementation extends RubyObject implements SimpleJavaInterf
             " \n" +
             "  java_signature 'void testingMethod()'\n" +
             "	def testingMethod()\n" +
-            "		p \"testing method implemented in JRuby\"\n" +
+            "		p \"JRuby code run inside Java... :) I love Poznan!\"\n" +
             "	end\n" +
             "end\n" +
             "").toString();

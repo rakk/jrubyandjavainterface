@@ -39,7 +39,7 @@ public class SimpleImplementation extends RubyObject
     static 
     {
         __ruby__ = Ruby.getGlobalRuntime();
-        String s = (new StringBuilder("require 'java'\n\njava_import \"simplejavainterface.SimpleJavaInterface\"\n\nclass SimpleImplementation\n  java_implements Java::simplejavainterface.SimpleJavaInterface\n \n  java_signature 'void testingMethod()'\n\tdef testingMethod()\n\t\tp \"testing method implemented in JRuby\"\n\tend\nend\n")).toString();
+        String s = (new StringBuilder("require 'java'\n\njava_import \"simplejavainterface.SimpleJavaInterface\"\n\nclass SimpleImplementation\n  java_implements Java::simplejavainterface.SimpleJavaInterface\n \n  java_signature 'void testingMethod()'\n\tdef testingMethod()\n\t\tp \"JRuby code run inside Java... :) I love Poznan!\"\n\tend\nend\n")).toString();
         __ruby__.executeScript(s, "SimpleImplementation.rb");
         RubyClass rubyclass = __ruby__.getClass("SimpleImplementation");
         rubyclass.setRubyStaticAllocator(SimpleImplementation);
