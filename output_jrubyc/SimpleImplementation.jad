@@ -1,0 +1,109 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   SimpleImplementation.rb
+
+import org.jruby.*;
+import org.jruby.ast.executable.AbstractScript;
+import org.jruby.ast.executable.RuntimeCache;
+import org.jruby.internal.runtime.methods.CallConfiguration;
+import org.jruby.javasupport.util.RuntimeHelpers;
+import org.jruby.runtime.*;
+import org.jruby.runtime.builtin.IRubyObject;
+
+public class SimpleImplementation extends AbstractScript
+{
+
+    private static void setPosition(ThreadContext threadcontext, int i)
+    {
+        threadcontext.setFileAndLine("SimpleImplementation.rb", i);
+    }
+
+    public SimpleImplementation()
+    {
+        filename = "SimpleImplementation.rb";
+        super.runtimeCache = new RuntimeCache();
+        initFromDescriptor("require\uFFFFF\uFFFFjava_import\uFFFFF\uFFFFjava_implements\uFFFFF\uFFFFSimpleJavaInterface\uFFFFN\uFFFFsimplejavainterface\uFFFFN\uFFFFjava_signature\uFFFFF\uFFFFp\uFFFFF\uFFFF\001\000\000\001\000\000\000\000\000\000\000\004\001");
+        setEncoding(0, "ASCII-8BIT");
+        setByteList(3, "testing method implemented in JRuby", getEncoding0());
+        setByteList(1, "simplejavainterface.SimpleJavaInterface", getEncoding0());
+        setByteList(0, "java", getEncoding0());
+        setByteList(2, "void testingMethod()", getEncoding0());
+    }
+
+    public static IRubyObject __file__(SimpleImplementation simpleimplementation, ThreadContext threadcontext, IRubyObject irubyobject, IRubyObject airubyobject[], Block block)
+    {
+        simpleimplementation.getCallSite0().call(threadcontext, irubyobject, irubyobject, simpleimplementation.getString0(threadcontext.runtime, 32));
+        simpleimplementation.getCallSite1().call(threadcontext, irubyobject, irubyobject, simpleimplementation.getString1(threadcontext.runtime, 32));
+        return class_0$RUBY$SimpleImplementation(simpleimplementation, threadcontext, irubyobject, Block.NULL_BLOCK);
+    }
+
+    public IRubyObject __file__(ThreadContext threadcontext, IRubyObject irubyobject, IRubyObject airubyobject[], Block block)
+    {
+        return __file__(this, threadcontext, irubyobject, airubyobject, block);
+    }
+
+    public static IRubyObject class_0$RUBY$SimpleImplementation(SimpleImplementation simpleimplementation, ThreadContext threadcontext, IRubyObject irubyobject, Block block)
+    {
+        null;
+        RuntimeHelpers.prepareClassNamespace(threadcontext, threadcontext.nil);
+        JVM INSTR swap ;
+        "SimpleImplementation";
+        JVM INSTR swap ;
+        defineOrGetClassUnder();
+        JVM INSTR dup ;
+        irubyobject;
+        threadcontext;
+        JVM INSTR swap ;
+        simpleimplementation.getScope0(threadcontext, ",0,0,-1");
+        preCompiledClassDummyScope();
+        simpleimplementation.getCallSite2().call(threadcontext, irubyobject, irubyobject, simpleimplementation.getCallSite3().call(threadcontext, irubyobject, simpleimplementation.getCallSite4().call(threadcontext, irubyobject, simpleimplementation.getConstant0(threadcontext, "Java"))));
+        simpleimplementation.getCallSite5().call(threadcontext, irubyobject, irubyobject, simpleimplementation.getString2(threadcontext.runtime, 32));
+          goto _L1
+        threadcontext.postCompiledClass();
+        throw ;
+_L1:
+        threadcontext.postCompiledClass();
+        return RuntimeHelpers.def(threadcontext, irubyobject, simpleimplementation, "testingMethod", "method__1$RUBY$testingMethod", ",0,0,-1", 0, "SimpleImplementation.rb", 8, CallConfiguration.FrameNoneScopeNone, "NONE");
+    }
+
+    public static IRubyObject method__1$RUBY$testingMethod(SimpleImplementation simpleimplementation, ThreadContext threadcontext, IRubyObject irubyobject, Block block)
+    {
+        return simpleimplementation.getCallSite6().call(threadcontext, irubyobject, irubyobject, simpleimplementation.getString3(threadcontext.runtime, 32));
+    }
+
+    public static IRubyObject method__1$RUBY$testingMethod(SimpleImplementation simpleimplementation, ThreadContext threadcontext, IRubyObject irubyobject, IRubyObject airubyobject[], Block block)
+    {
+        RuntimeHelpers.checkArgumentCount(threadcontext, airubyobject, 0);
+        return method__1$RUBY$testingMethod(simpleimplementation, threadcontext, irubyobject, block);
+    }
+
+    public static IRubyObject class_0$RUBY$SimpleImplementation(SimpleImplementation simpleimplementation, ThreadContext threadcontext, IRubyObject irubyobject, IRubyObject airubyobject[], Block block)
+    {
+        Arity.checkArgumentCount(threadcontext.getRuntime(), airubyobject, 0, 0);
+        return class_0$RUBY$SimpleImplementation(simpleimplementation, threadcontext, irubyobject, block);
+    }
+
+    public IRubyObject load(ThreadContext threadcontext, IRubyObject irubyobject, IRubyObject airubyobject[], Block block)
+    {
+        RuntimeHelpers.preLoad(threadcontext, ",0,0,-2");
+        RuntimeHelpers.postLoad(threadcontext);
+        return __file__(this, threadcontext, irubyobject, airubyobject, block);
+        RuntimeHelpers.postLoad(threadcontext);
+        throw ;
+    }
+
+    public static void main(String args[])
+    {
+        SimpleImplementation simpleimplementation;
+        RubyInstanceConfig rubyinstanceconfig;
+        simpleimplementation = new SimpleImplementation();
+        String s;
+        simpleimplementation.setFilename(s = SimpleImplementation.getClassLoader().getResource("SimpleImplementation.class").toString());
+        rubyinstanceconfig = new RubyInstanceConfig();
+        rubyinstanceconfig.setArgv(args);
+        rubyinstanceconfig.setScriptFileName(s);
+        Ruby ruby;
+        simpleimplementation.load((ruby = Ruby.newInstance(rubyinstanceconfig)).getCurrentContext(), ruby.getTopSelf(), IRubyObject.NULL_ARRAY, Block.NULL_BLOCK);
+    }
+}
